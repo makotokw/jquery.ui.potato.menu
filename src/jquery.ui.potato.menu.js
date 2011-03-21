@@ -1,7 +1,7 @@
 /*!
  * jquery.ui.potato.menu
  * 
- * Copyright (c) 2009-2010 makoto_kw, http://www.makotokw.com
+ * Copyright (c) 2009-2011 makoto_kw, http://www.makotokw.com
  * Licensed under the MIT license.
  * 
  * @author makoto_kw

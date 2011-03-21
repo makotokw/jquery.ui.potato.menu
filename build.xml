@@ -13,7 +13,7 @@
 				<include name="${projectname}_${version}_${today}.zip"/>
 			</fileset>
 		</delete>
-		<java jar="${arcadia.yuicompressor}" fork="true">
+		<java jar="${tools.yuicompressor}" fork="true">
 			<arg line="src/${projectname}.js -o build/${projectname}-min.js --type js"/>
 		</java>
 		<zip destfile="${dest}/${projectname}_${version}.zip">
