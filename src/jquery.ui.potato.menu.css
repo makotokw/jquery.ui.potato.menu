@@ -5,9 +5,9 @@
  * Licensed under the MIT license.
  * 
  * @author makoto_kw
- * @version 1.1
+ * @version 1.2
  */
-ul.potato-menu {
+.potato-menu {
 	margin:0;
 	padding:0;
 	width:auto;
@@ -22,22 +22,22 @@ ul.potato-menu {
 	font-size: 0.1em;
 	line-height: 0;
 }
-ul.potato-menu li.potato-menu-item {
-	margin:0;
+.potato-menu .potato-menu-item {
 	padding:0;
 	position:relative;
 	list-style:none;
 	list-style-position:outside;
 	display:inline;
+	margin:0;
 	float:left;
 }
-ul.potato-menu li.potato-menu-item a {
+.potato-menu .potato-menu-item a {
 	display:block;
 	text-decoration:none;
 	white-space:nowrap;
 	outline:0;
 }
-ul.potato-menu ul.potato-menu-group {
+.potato-menu .potato-menu-group {
 	margin:0;
 	padding:0;
 	-webkit-padding-start:0;
