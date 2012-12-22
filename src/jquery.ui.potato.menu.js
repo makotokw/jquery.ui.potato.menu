@@ -22,7 +22,7 @@
 		hoverClass:'potato-menu-hover',
 		showDuration: 350,
 		hideDuration: 100,
-		stayAfterMouseout: 500
+		hideDelayDuration: 0
 	};
 	function menu() {
 		var option = (typeof(arguments[0])!='string') ? $.extend(defaults,arguments[0]) : $.extend(defaults,{});
@@ -70,7 +70,11 @@
 					$menuGroup.css(offset).fadeIn(option.showDuration);
 				},
 				function(e) {
-					$menuGroup.delay(option.stayAfterMouseout).fadeOut(option.hideDuration);
+					if (option.hideDelayDuration > 0) {
+						$menuGroup.delay(option.hideDelayDuration).fadeOut(option.hideDuration);
+					} else {
+						$menuGroup.fadeOut(option.hideDuration);
+					}
 				}
 			);
 		});
