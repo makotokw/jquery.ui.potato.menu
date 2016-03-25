@@ -1,0 +1,26 @@
+{
+  "name": "jquery.ui.potato.menu",
+  "version": "1.2.1",
+  "description": "Simple Drop Down Menu for jQuery",
+  "main": "src/jquery.ui.potato.menu.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:makotokw/jquery.ui.potato.menu.git"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "clean": "node -e \"var s=require('shelljs'),d=['dist'];s.rm('-rf',d);s.mkdir('-p',d);\"",
+    "build": "uglifyjs src/jquery.ui.potato.menu.js --comments --mangle --compress -o dist/jquery.ui.potato.menu.min.js --source-map dist/jquery.ui.potato.menu.min.js.map"
+  },
+  "keywords": [],
+  "author": "Makoto Kawasaki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/makotokw/jquery.ui.potato.menu/issues"
+  },
+  "homepage": "https://github.com/makotokw/jquery.ui.potato.menu#readme",
+  "devDependencies": {
+    "shelljs": "^0.6.0",
+    "uglify-js": "^2.6.2"
+  }
+}
