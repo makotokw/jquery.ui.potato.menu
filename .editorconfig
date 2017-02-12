@@ -1,0 +1,24 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+root = true
+
+# Due to a bug in the EditorConfig for SublimeText, we set tab indentation for
+# all files and we set exceptions for all files with an extension
+
+[*]
+end_of_line = lf
+charset = utf-8
+
+[*.html]
+indent_style = space
+indent_size = 2
+
+[*.{css,sass}]
+indent_style = space
+indent_size = 2
+
+[*.js]
+indent_style = space
+indent_size = 2

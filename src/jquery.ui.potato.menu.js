@@ -1,12 +1,3 @@
-/**
- * jquery.ui.potato.menu
- *
- * Copyright (c) 2009-2016 makoto_kw, http://makotokw.com
- *
- * @author makoto_kw
- * @version 1.2.1
- * @license MIT
- */
 (function ($) {
 
   var defaults = {

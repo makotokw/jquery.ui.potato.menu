@@ -1,0 +1,9 @@
+/*!
+ * jquery.ui.potato.menu
+ *
+ * Copyright (c) 2009-<%= buildYear %> makoto_kw, https://makotokw.com
+ *
+ * @author makoto_kw
+ * @version <%= version %>
+ * @license MIT
+ */

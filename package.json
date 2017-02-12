@@ -20,7 +20,17 @@
   },
   "homepage": "https://github.com/makotokw/jquery.ui.potato.menu#readme",
   "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.1.0",
+    "grunt-notify": "^0.4.5",
+    "load-grunt-tasks": "^3.5.2",
+    "lodash": "^4.17.4",
     "shelljs": "^0.6.0",
+    "time-grunt": "^1.4.0",
     "uglify-js": "^2.6.2"
   }
 }
