@@ -62,6 +62,7 @@
       var $menuGroup = $parentMenuItem.find(option.menuGroupSelector + ':first').addClass(option.verticalClass);
       $parentMenuItem.hover(
         function (/*e*/) {
+          $menuGroup.stop(true, true);
           var offset = {left: '', top: ''};
           if (displayDirection == 'bottom') {
             offset.left = 0;
