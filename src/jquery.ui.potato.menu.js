@@ -13,6 +13,7 @@
     hasHorizontalClass: 'potato-menu-has-horizontal',
     hoverClass: 'potato-menu-hover',
     showDuration: 350,
+    showDelayDuration: 200,
     hideDuration: 100,
     hideDelayDuration: 0
   };
@@ -46,6 +47,8 @@
         $(this).removeClass(option.hoverClass);
       }
     );
+
+    var setTimeoutConst;
     $menuGroups.parent().each(function (/*index*/) {
       var $parentMenuItem = $(this); // menu item that has menu group
       var displayDirection = ($parentMenuItem.parent().hasClass(option.horizontalClass)) ? 'bottom' : 'right';
@@ -53,15 +56,18 @@
       var $menuGroup = $parentMenuItem.find(option.menuGroupSelector + ':first').addClass(option.verticalClass);
       $parentMenuItem.hover(
         function (/*e*/) {
-          $menuGroup.stop(true, true);
-          var offset = {left: '', top: ''};
-          if (displayDirection == 'bottom') {
-            offset.left = 0;
-          } else {
-            offset.left = $(this).width() + 'px';
-            offset.top = '0px';
-          }
-          $menuGroup.css(offset).fadeIn(option.showDuration);
+          var $t = $(this);
+          setTimeoutConst = setTimeout(function(){
+            $menuGroup.stop(true, true);
+            var offset = {left: '', top: ''};
+            if (displayDirection == 'bottom') {
+              offset.left = 0;
+            } else {
+              offset.left = $t.width() + 'px';
+              offset.top = '0px';
+            }
+            $menuGroup.css(offset).fadeIn(option.showDuration);
+          }, option.showDelayDuration);
         },
         function (/*e*/) {
           if (option.hideDelayDuration > 0) {
@@ -69,6 +75,7 @@
           } else {
             $menuGroup.fadeOut(option.hideDuration);
           }
+          clearTimeout(setTimeoutConst);
         }
       );
     });
